@@ -15,8 +15,5 @@
 
 <script setup>
 const { posts } = defineProps(['posts'])
-
 const tagSet = [...new Set(posts.flatMap((post) => post.tags))]
-
-console.log(tagSet)
 </script>

@@ -35,6 +35,7 @@
 import { ref } from 'vue'
 import Spinner from '../components/Spinner.vue'
 import { useRouter } from 'vue-router'
+import { projectFirestore, timestamp } from '../firebase/config'
 
 const postForm = ref(null)
 const title = ref('')
@@ -49,21 +50,18 @@ function handleSubmit() {
   const post = {
     title: title.value,
     body: body.value,
-    tags: tags.value
+    tags: tags.value,
+    createdAt: timestamp()
   }
 
   dataSending.value = true
 
   async function upload(post) {
     try {
-      const data = await fetch('http://localhost:3000/posts/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(post)
-      })
-      if (!data.ok) {
-        throw Error('data not sent')
-      }
+      const res = await projectFirestore.collection('posts').add(post)
+      // if (!res) {
+      //   throw Error('Data not sent')
+      // }
       dataSending.value = false
       router.push({ name: 'Home' })
     } catch (err) {

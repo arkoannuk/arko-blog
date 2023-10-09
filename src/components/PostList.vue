@@ -7,7 +7,6 @@
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
 import SinglePost from './SinglePost.vue'
 
 const { posts } = defineProps(['posts'])
