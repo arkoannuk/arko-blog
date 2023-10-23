@@ -16,11 +16,9 @@ projectFirestore
   .collection('posts')
   .orderBy('createdAt', 'desc')
   .onSnapshot((snap) => {
-    console.log(snap)
     let docs = snap.docs.map((doc) => {
       return { ...doc.data(), id: doc.id }
     })
-    console.log(docs)
     posts.value = docs
   })
 

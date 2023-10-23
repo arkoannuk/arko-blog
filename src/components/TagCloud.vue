@@ -1,8 +1,10 @@
 <template>
-  <div class="mt-3 hstack gap-4">
-    <div v-for="tag in tagSet" :key="tag">
+  <div class="row">
+    <div class="col-12 mt-5">
       <RouterLink
-        class="text-decoration-none text-primary"
+        v-for="tag in tagSet"
+        :key="tag"
+        class="text-decoration-none text-primary pe-2"
         active-class="text-secondary"
         :to="{ name: 'Tag', params: { tag: tag } }"
       >
