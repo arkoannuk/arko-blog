@@ -1,35 +1,11 @@
-# .
+Steps to run locally:
 
-This template should help get you started developing with Vue 3 in Vite.
+`npm install json-server`
 
-## Recommended IDE Setup
+`json-server --watch data/db.json`
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+`npm run dev`
 
-## Customize configuration
+![project-image1](https://res.cloudinary.com/dgjfea9cb/image/upload/v1698163594/arko-blog1_a2yp59.png)
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+![project-image2](https://res.cloudinary.com/dgjfea9cb/image/upload/v1698163596/arko-blog2_nvpzxb.png)
